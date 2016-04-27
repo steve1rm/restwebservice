@@ -1,0 +1,56 @@
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+repositories {
+    jcenter()
+
+    /* Local jar files to be included in src libs directory */
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.3.3.RELEASE")
+    }
+}
+
+jar {
+    baseName = 'gs-rest-service'
+    version =  '0.1.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    // compile("org.springframework.boot:spring-boot-starter-web")
+
+    compile ('org.springframework.boot:spring-boot-starter') {
+        exclude module : 'spring-boot-starter-logging'
+    }
+    compile ('org.springframework.boot:spring-boot-starter-web') {
+        exclude module : 'spring-boot-starter-logging'
+    }
+
+    compile 'commons-logging:commons-logging:1.1.1'
+
+    /* Software link to xmppRestAPI/build/libs/async-http-client */
+    compile name: 'async-http-client-1.0.0'
+
+    testCompile("junit:junit")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}
+
+configurations {
+    runtime.exclude group: "org.slf4j", module: "slf4j-log4j12"
+    compile.exclude group: "org.slf4j", module: "slf4j-log4j12"
+}
