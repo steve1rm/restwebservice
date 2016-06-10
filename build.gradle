@@ -40,8 +40,10 @@ dependencies {
 
     compile 'commons-logging:commons-logging:1.1.1'
 
+    compile 'com.googlecode.json-simple:json-simple:1.1.1'
+
     /* Software link to xmppRestAPI/build/libs/async-http-client */
-    compile name: 'async-http-client-1.0.0'
+    // TODO REMOVE THIS COMMENT   compile name: 'async-http-client-1.0.0'
 
     testCompile("junit:junit")
 }
