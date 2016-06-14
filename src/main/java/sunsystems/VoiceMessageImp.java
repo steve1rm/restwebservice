@@ -8,7 +8,7 @@ import org.json.simple.JSONObject;
 
 import sunsystems.VoiceMessage;
 
-public class VoiceMessageImp implements VoiceMessageContract<VoiceMessage> {
+public class VoiceMessageImp implements MessageContract<VoiceMessage> {
     private List<VoiceMessage> mVoiceMessageList = Collections.emptyList();
     
     public VoiceMessageImp() {
@@ -40,7 +40,6 @@ public class VoiceMessageImp implements VoiceMessageContract<VoiceMessage> {
 
             jsonObject = new JSONObject();
             jsonObject.put("get_voicemall_msg", jsonArray);
-
             return jsonObject.toJSONString();
         }
         else {
@@ -49,7 +48,7 @@ public class VoiceMessageImp implements VoiceMessageContract<VoiceMessage> {
     }
 
     @Override
-    public void createVoiceMessageList() {
+    public void createMessageList() {
 
         VoiceMessage voiceMessage =
             VoiceMessage.getNewInstance("nutapong",
