@@ -20,7 +20,6 @@ public class VoiceMessageImp implements MessageContract<VoiceMessage> {
 
         if(!mVoiceMessageList.isEmpty()) {
             JSONObject jsonObject = null;
-            ;
             final JSONArray jsonArray = new JSONArray();
 
             for(VoiceMessage voiceMessage : mVoiceMessageList) {

@@ -26,6 +26,10 @@ public class MessageController {
      */
     @RequestMapping("/faxMessages")
     public String getAllFaxMessages() {
-        return "";
+        final MessageContract faxMessageControl = new FaxMessageImp();
+
+        faxMessageControl.createMessageList();
+
+        return faxMessageControl.createJSON();
     }
 }
