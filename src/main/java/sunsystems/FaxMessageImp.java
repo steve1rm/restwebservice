@@ -47,36 +47,34 @@ public class FaxMessageImp implements MessageContract<FaxMessage> {
 
     @Override
     public void createMessageList() {
-
         FaxMessage faxMessage =
             FaxMessage.getNewInstance("nutapong_fax",
-                                        "555",
-                                        "39",
-                                        "1",
-                                        "2015-04-24 03:37:53",
-                                        "0000971001",
-                                        "https://www.call-genie.com/users/voicemail/COMP_20140097/voice/rvoice/555201504022307384.tif");
+                                      "555",
+                                      "39",
+                                      "1",
+                                      "2015-04-24 03:37:53",
+                                      "0000971001",
+                                      "https://www.call-genie.com/users/voicemail/COMP_20140097/voice/rvoice/555201504022307384.tif");
         mFaxMessageList.add(faxMessage);
 
         faxMessage =
             FaxMessage.getNewInstance("suwat_fax",
-                                        "553",
-                                        "29",
-                                        "4",
-                                        "2016-04-24 03:37:53",
-                                        "0000971001",
-                                        "https://www.call-genie.com/users/voicemail/COMP_20140097/voice/rvoice/555201504022307384.tif");
+                                      "553",
+                                      "29",
+                                      "4",
+                                      "2016-04-24 03:37:53",
+                                      "0000971001",
+                                      "https://www.call-genie.com/users/voicemail/COMP_20140097/voice/rvoice/555201504022307384.tif");
         mFaxMessageList.add(faxMessage);
 
         faxMessage =
             FaxMessage.getNewInstance("somsak_fax",
-                                        "553",
-                                        "29",
-                                        "4",
-                                        "2016-04-24 03:37:53",
-                                        "0000971001",
-                                        "https://www.call-genie.com/users/voicemail/COMP_20140097/voice/rvoice/555201504022307384.tif");
+                                      "553",
+                                      "29",
+                                      "4",
+                                      "2016-04-24 03:37:53",
+                                      "0000971001",
+                                      "https://www.call-genie.com/users/voicemail/COMP_20140097/voice/rvoice/555201504022307384.tif");
         mFaxMessageList.add(faxMessage);
     }
-
 }
